@@ -95,6 +95,7 @@ public class RestaurantTest {
         int totalOrderValue = restaurant.getOrderValue(orderedItems);
 
         assertEquals(totalOrderValue,388);
+
     }
 }
 

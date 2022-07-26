@@ -19,13 +19,11 @@ public class RestaurantServiceTest {
         restaurant.addToMenu("Vegetable lasagne", 269);
     }
 
-
     //>>>>>>>>>>>>>>>>>>>>>>SEARCHING<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test
     public void searching_for_existing_restaurant_should_return_expected_restaurant_object() throws restaurantNotFoundException {
         //WRITE UNIT TEST CASE HERE
         Restaurant searchedRestaurant = service.findRestaurantByName("Amelie's cafe");
-
         //Assert
         assertThat(searchedRestaurant, instanceOf(Restaurant.class));
     }
@@ -79,6 +77,7 @@ public class RestaurantServiceTest {
         int initialNumberOfRestaurants = service.getRestaurants().size();
         service.addRestaurant("Pumpkin Tales","Chennai",LocalTime.parse("12:00:00"),LocalTime.parse("23:00:00"));
         assertEquals(initialNumberOfRestaurants + 1,service.getRestaurants().size());
+
     }
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
 }

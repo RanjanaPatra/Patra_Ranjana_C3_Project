@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Restaurant {
+
     private String name;
     private String location;
     public LocalTime openingTime;
@@ -14,6 +15,7 @@ public class Restaurant {
         this.location = location;
         this.openingTime = openingTime;
         this.closingTime = closingTime;
+
     }
 
     public boolean isRestaurantOpen() {
@@ -56,23 +58,11 @@ public class Restaurant {
                 +"Opening time:"+ openingTime +"\n"
                 +"Closing time:"+ closingTime +"\n"
                 +"Menu:"+"\n"+getMenu());
-
-
     }
 
     public String getName() {
         return name;
     }
-
-    // orderValue method
-
-    public int getOrderValue (List<String> orderedItems) {
-        int totalOrderValue = 0;
-        for ( String orderedItem : orderedItems) {
-            totalOrderValue += findItemByName(orderedItem).getPrice();
-        }
-        return totalOrderValue;
-        }
-    }
+}
 
 
